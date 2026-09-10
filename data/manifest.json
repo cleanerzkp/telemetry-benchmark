@@ -1,0 +1,55 @@
+{
+  "entity": "machine-1-2",
+  "source_commit": "7fb0e0acf89ea49908896bcc9f9e80fcfff6baf4",
+  "prepared_at": "2026-09-10T18:54:42Z",
+  "source_hashes": {
+    "train.raw": "7f6f63ec34ce616c87b4c30d66fd52ad1b21149634ae3ff7bb1827a76d6ef79a",
+    "evaluation.raw": "f409991af7c049d3f286a8cf89dc2fa99114bea8753f6c3aea4bd24cb03eb015",
+    "labels.raw": "c2dbb3e4f89c9eb48f30fd1ddae48b80e7ae7ad7ca9abf2ffd71b6557ef2bb20"
+  },
+  "files": {
+    "fit.csv": {
+      "rows": 18955,
+      "sha256": "edde8edb25e3102f858ed960374da0a82bc3405f631e39f20a937f7300068e38"
+    },
+    "calibration.csv": {
+      "rows": 4619,
+      "sha256": "08bd01bdfe8c3c6adb4fb40162de26fe367327d9e8c9646477de56efaca23186"
+    },
+    "validation.csv": {
+      "rows": 9477,
+      "sha256": "1079a8a631be6496434ee75272f1ce1e005017867967beb1ad2f87a644d0e30e"
+    },
+    "validation_labels.csv": {
+      "rows": 9477,
+      "sha256": "6baf434b04b9a339acb4780a1860ddc8fccc9f630b6858977decc7607fe11301"
+    },
+    "holdout.csv": {
+      "rows": 14097,
+      "sha256": "79c2c7b11551576244ac97003bfe66824486913ded689d011b280631735211d0"
+    },
+    "holdout_labels.csv": {
+      "rows": 14097,
+      "sha256": "f712adcbfe678dc6fcad74f3cf061b4c15b54c0f69d0663fca3255079d5fcb38"
+    }
+  },
+  "ranges": {
+    "fit": [
+      0,
+      18955
+    ],
+    "calibration": [
+      19075,
+      23694
+    ],
+    "validation": [
+      0,
+      9477
+    ],
+    "holdout": [
+      9597,
+      23694
+    ]
+  },
+  "interval": "half-open, zero-based; calibration uses train.raw, validation/holdout use evaluation.raw"
+}
