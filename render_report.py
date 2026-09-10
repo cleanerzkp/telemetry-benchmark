@@ -52,7 +52,8 @@ def main():
     summary=(f"DAE uzyskał {relation} F1 niż baseline wybrany na walidacji: {ae['f1']:.3f} wobec {b['f1']:.3f}. "
              f"Dopasował {ae['matched']} z {ae['incidents']} incydentów przy {ae['false_alarms_per_day']:.2f} FA/dobę; "
              f"baseline dopasował {b['matched']} z {b['incidents']} przy {b['false_alarms_per_day']:.2f} FA/dobę. "
-             'To obserwacja z jednego odłożonego bloku, nie dowód przewagi ogólnej ani gotowości wdrożeniowej.')
+             f"Rolling uzyskał F1 {m['methods']['rolling']['f1']:.3f}: nie wykazano przewagi DAE nad monitoringiem progowym. "
+             'To obserwacja z jednego bloku, nie dowód przewagi ogólnej ani gotowości wdrożeniowej.')
     counts='; '.join(f"{NAMES[n]}: {v['matched']}/{v['incidents']} trafień, {v['alarm_episodes']} epizodów, {v['false_alarms']} FA, {v['duplicate_alarms']} duplikatów" for n,v in m['methods'].items())+'.'
     limitation=('Publiczny zbiór nie odwzorowuje heterogenicznej telemetrii radiowej. Brak kontrolowanych scenariuszy degradacyjnych. '
         'Rozpoznanie służy weryfikacji metodyki i narzędzi, nie walidacji rozwiązania. Jedna maszyna, jeden seed i niewielka liczba incydentów '
